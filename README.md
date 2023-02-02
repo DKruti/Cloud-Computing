@@ -22,11 +22,12 @@ ZIPCODE Service:
    curl http://127.0.0.1:5001/zipcode?city=San Jose
  
 NOW steps for Docker and container
-6. After completing above steps create Dockerfile with code
-7. open terminal and type command: docker build --tag zipcode-docker
-8. run the docker type command in terminal: docker run --publish 5001:5000 zipcode-docker
-9. Docker is successfully created to check images: docker images
-10. check for container running: docker ps
+
+ 6. After completing above steps create Dockerfile with code
+ 7. open terminal and type command: docker build --tag zipcode-docker
+ 8. run the docker type command in terminal: docker run --publish 5001:5000 zipcode-docker
+ 9. Docker is successfully created to check images: docker images
+ 10. check for container running: docker ps
    
 weather Service:
 1. Created second project for service 2 : [zipcode -> temprature] in python file name: main.py
@@ -38,10 +39,11 @@ weather Service:
    curl http://127.0.0.1:5001/weather?zipcode=95112
 
 NOW steps for Docker and container
-6. After completing above steps create Dockerfile with code
-7. open terminal and type command: docker build --tag weather-docker
-8. run the docker type command in terminal: docker run --publish 5001:5000 weather-docker
-9. Docker is successfully created to check images: docker images
-10. check for container running: docker ps
+ 
+ 6. After completing above steps create Dockerfile with code
+ 7. open terminal and type command: docker build --tag weather-docker
+ 8. run the docker type command in terminal: docker run --publish 5001:5000 weather-docker
+ 9. Docker is successfully created to check images: docker images
+ 10. check for container running: docker ps
 
 NOTE: output images are uploaded both browerser and running container.
