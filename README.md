@@ -28,7 +28,7 @@ NOTE: here to call another serice form one serice you have to write http request
 
  6. After completing above steps create Dockerfile with code
  7. open terminal and type command: docker build --tag zipcode-service .
- 8. run the docker type command in terminal: docker run --name zipcode-serice-container --publish 5000:5000 zipcode-service
+ 8. run the docker type command in terminal: docker run --name zipcode-service-container --publish 5000:5000 zipcode-service
    
 ## weather Service:
 1. Created second project for service 2 : [zipcode -> temprature] in python file name: main.py
