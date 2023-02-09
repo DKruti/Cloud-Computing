@@ -5,7 +5,7 @@
 
 from flask import Flask, request
 
-
+import requests
 app = Flask(__name__)
 
 
@@ -24,15 +24,24 @@ def getzipcode():
         return " Please provide valid city name"
 
     zipcode = dictionary.get(city)
-
-    if zipcode is None:
-        return f"Zip code for {city} is not found"
-    return zipcode
+    response = ''
+    # follwoing 3 line used for indiviual serivce run
+    #if zipcode is None:
+    #    return f"Zip code for {city} is not found"
+    #return zipcode
+    
+    # following lines are used to call other service based on the output of this service
+    try:
+        response = requests.get('http://weather-service-container:5001/weather?zipcode='+zipcode)
+    except requests.exceptions.RequestException as e:
+        print('\n Cannot reach the WEATHER service.')
+        return zipcode
+    return "weather=" + response.text + '\n'
 
 
 @app.route('/')
 def hello_world():
-    return 'hello test'
+    return 'City to Zipcode'
 
 
 if __name__ == '__main__':
