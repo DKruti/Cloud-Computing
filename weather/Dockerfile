@@ -15,4 +15,7 @@ COPY . .
 ENV FLASK_APP=main.py
 
 #CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
-CMD ["flask", "run", "--host=0.0.0.0"]
+#CMD ["flask", "run", "--host=0.0.0.0"]
+# add port to run on different port different services
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5001"]
+
