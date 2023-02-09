@@ -1,12 +1,12 @@
 # Cloud-Computing 
-Home work - 1 Write a web application to find the weather of a given city. 
+## Home work - 1 Write a web application to find the weather of a given city. one service call another service
 
     1. Design the service using two microservices: 
       a. which takes city name as input and provide zipcode as output
       b. which takes zipcode as input and provide temprature as output
 
     2. Implement these two independent microservices and then test them using either browser client or curl client.
-    3. Make these two microservices work together (Optional).
+    3. Make these two microservices work together.
 
 GITHUB Link: https://github.com/DKruti/Cloud-Computing.git
 
@@ -46,6 +46,16 @@ NOTE: this is called service so no need to write http request call. the code sam
  7. open terminal and type command: docker build --tag weather-service .
  8. run the docker type command in terminal: docker run --name weather-service-container -p 5001:5001 weather-service
 
-###
+### To make Network between services
+If you want use two serices work together they must be in one network so first we have to create a network using following command and add bothe service containers in that created network. For this REFERE Updated final Screenshot output.... .pdf file which has command as well as steps
+1. docker network create zipcode-weather-network
+2. docker network inspect zipcode-weather-network
+3. docker network connect zipcode-weather-network zipcode-service-container
+4. repeat command 3 to add all the services to the network
 
-NOTE: output is in "updated final Screenshot of homework1 output and steps -19732-kruti dhyani.pdf" file the images are older one which shows individual serivce are working.
+To check conatiners are successfully created and running write a following commands in terminal
+1. docker container ls
+2. docker images
+3. docker ps
+
+NOTE: output is in "updated final Screenshot of homework1 output and steps -19732-kruti dhyani.pdf" file. The .png images are older one which shows individual serivce are working.
