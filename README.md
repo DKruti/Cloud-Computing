@@ -21,7 +21,8 @@ NOTE: here to call another serice form one serice you have to write http request
    http://localhost:5000/zipcode?city=San Jose
 5. To run using curl type following line in terminal:
    curl http://localhost:5000/zipcode?city=San Jose
-   Output will be weather of that city: weather = 72F 
+   
+ Output will be weather of that city: weather = 72F 
  
 ## NOW steps for Docker and container
 
