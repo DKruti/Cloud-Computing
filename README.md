@@ -18,10 +18,10 @@ NOTE: here to call another serice form one serice you have to write http request
 2. Added requirements.txt which has pre requisties of flask and requests install command
 3. run the code in the python
 4. To run in to browerser type following line in any browser:
-   http://localhost:5000/zipcode?city=San%20Jose
+   http://localhost:5000/zipcode?city=San Jose
 5. To run using curl type following line in terminal:
    curl http://localhost:5000/zipcode?city=San Jose
-Output: weather = 72F 
+   Output will be weather of that city: weather = 72F 
  
 ## NOW steps for Docker and container
 
